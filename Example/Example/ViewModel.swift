@@ -7,7 +7,7 @@
 //
 
 import RxCocoa
-import RxLocalizer
+import RxLocalizer_Hi
 import RxSwift
 
 protocol ViewModelType {

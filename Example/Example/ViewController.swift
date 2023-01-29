@@ -6,7 +6,7 @@
 //  Copyright (c) RxSwiftCommunity
 //
 
-import RxLocalizer
+import RxLocalizer_Hi
 import RxSwift
 import UIKit
 

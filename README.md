@@ -33,7 +33,7 @@ pod 'RxLocalizer'
 ### Before all:
 
 ```swift
-import RxLocalizer
+import RxLocalizer_Hi
 ```
 
 ### Reactive localized strings
