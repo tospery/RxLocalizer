@@ -1,22 +1,22 @@
 [![Build Status](https://travis-ci.org/RxSwiftCommunity/RxLocalizer.svg?branch=master)](https://travis-ci.org/RxSwiftCommunity/RxLocalizer)
-[![Swift](https://img.shields.io/badge/swift-5.3-orange.svg)](https://github.com/RxSwiftCommunity/RxLocalizer)
-[![RxSwift](https://img.shields.io/badge/RxSwift-6.1-red.svg)](https://github.com/ReactiveX/RxSwift)
-[![Platform](https://img.shields.io/badge/iOS-12+-blue.svg)](https://github.com/RxSwiftCommunity/RxLocalizer/blob/master/LICENSE)
+[![Swift](https://img.shields.io/badge/swift-5-orange.svg)](https://github.com/RxSwiftCommunity/RxLocalizer)
+[![RxSwift](https://img.shields.io/badge/RxSwift-5-red.svg)](https://github.com/ReactiveX/RxSwift)
+[![Platform](https://img.shields.io/badge/iOS-10+-blue.svg)](https://github.com/RxSwiftCommunity/RxLocalizer/blob/master/LICENSE)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/RxSwiftCommunity/RxLocalizer/blob/master/LICENSE)
 
-# 🚀 RxLocalizer
+# RxLocalizer
 
 RxLocalizer is a framework written in swift which allows you to localize your apps, using RxSwift. 
 
 <p align="center"><img src="demo.gif" width="320" height="495" />
 
-## 🛠 Requirements
+## Requirements
 
-- Xcode 12.4
-- Swift 5+
-- iOS 12+
+- Xcode 11.4
+- Swift 5.2+
+- iOS 10+
 
-## ⚙️ Installation
+## Installation
 
 ### Swift Package Manager (requires Xcode 11)
 
@@ -28,7 +28,7 @@ Add package into Project settings -> Swift Packages
 pod 'RxLocalizer'
 ```
 
-## 👨‍💻 Usage
+## Usage
 
 ### Before all:
 
@@ -67,7 +67,7 @@ let localizerConfig = LocalizerConfig(defaults: .standard, bundle: .main, tableN
 Localizer.shared.changeConfiguration.accept(localizerConfig)
 ```
 
-## 👮‍♂️License
+## License
 
 RxLocalizer is available under the MIT license. See the LICENSE file for more info.
 Copyright (c) RxSwiftCommunity

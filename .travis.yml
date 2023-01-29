@@ -1,9 +1,9 @@
-os:
-  - osx
+osx_image: xcode10.2
 language: swift
-osx_image: xcode11
+
+install: true
+
 env:
-  - PROJECT_NAME=Example
-install: (cd $PROJECT_NAME && swift package update)
-script:
-  - (cd $PROJECT_NAME && swift build)
+  - BUILD="gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet; pod repo update && pod lib lint RxLocalizer.podspec --verbose"
+
+script: eval "${BUILD}"
