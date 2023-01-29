@@ -2,7 +2,7 @@ PODS:
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
-  - RxLocalizer-Hi (1.5.0-v1):
+  - RxLocalizer-Hi (1.5.0-v2):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
-  RxLocalizer-Hi: 1c9a1f74858c7680066c3a00516b4dbf1b8cd291
+  RxLocalizer-Hi: 9626c63d03cb0eec0d9ac2b40061e3d2697381c6
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 

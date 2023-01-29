@@ -5,7 +5,7 @@ s.ios.deployment_target = '10.0'
 s.name = "RxLocalizer-Hi"
 s.summary = "RxLocalizer allows you to localize your app with RxSwift."
 s.requires_arc = true
-s.version = "1.5.0-v1"
+s.version = "1.5.0-v2"
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "YangJianxiang" => "tospery@gmail.com" }
 s.homepage = "https://github.com/tospery/RxLocalizer"

@@ -27,14 +27,14 @@ public protocol LocalizerType {
     ///
     /// - Parameter string: String which will be localized
     /// - Returns: Localized string
-    func localized(_ string: String) -> Driver<String>
+    func localize(_ string: String) -> Driver<String>
     
     /// Localizes the string string interpolation, using Rx
     ///
     /// - Parameter string: String which will be localized
     /// - Parameter arguments: String argments which will be interpolated inside localized string
     /// - Returns: Localized string
-    func localized(_ string: String, arguments: CVarArg...) -> Driver<String>
+    func localize(_ string: String, arguments: CVarArg...) -> Driver<String>
     
     /// Localizes the string synchronously
     ///
@@ -63,24 +63,24 @@ public class Localizer: LocalizerType {
     private let configuration = BehaviorRelay<LocalizerConfig>(value: LocalizerConfig())
     private let disposeBag = DisposeBag()
     
-    public func localized(_ string: String) -> Driver<String> {
+    public func localize(_ string: String) -> Driver<String> {
         localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
-            $0.localizedString(forKey: string, value: "Unlocalized String", table: $1.tableName)
+            $0.localizedString(forKey: string, value: string, table: $1.tableName)
         }
     }
     
-    public func localized(_ string: String, arguments: CVarArg...) -> Driver<String> {
+    public func localize(_ string: String, arguments: CVarArg...) -> Driver<String> {
         localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
-            String(format: $0.localizedString(forKey: string, value: "Unlocalized String", table: $1.tableName), arguments: arguments)
+            String(format: $0.localizedString(forKey: string, value: string, table: $1.tableName), arguments: arguments)
         }
     }
     
     public func localized(_ string: String) -> String {
-        localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName)
+        localizationBundle.value.localizedString(forKey: string, value: string, table: configuration.value.tableName)
     }
     
     public func localized(_ string: String, arguments: CVarArg...) -> String {
-        String(format: localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName), arguments: arguments)
+        String(format: localizationBundle.value.localizedString(forKey: string, value: string, table: configuration.value.tableName), arguments: arguments)
     }
     
     private init() {

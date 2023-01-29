@@ -24,8 +24,8 @@ class ViewModel: ViewModelType {
     private let disposeBag = DisposeBag()
     
     public init(localizer: LocalizerType) {
-        localizedText = localizer.localized("testString")
-        localizedText2 = localizer.localized("testString2", arguments: "1", "0")
+        localizedText = localizer.localize("testString")
+        localizedText2 = localizer.localize("testString2", arguments: "1", "0")
         changeLanguageTrigger.bind(to: localizer.changeLanguage).disposed(by: disposeBag)
     }
 }
